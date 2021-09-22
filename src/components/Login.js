@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { login } from '../actions/auth'
 
 const Login = () => {
   const [state, setState] = useState({
@@ -16,7 +17,7 @@ const Login = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    
+    login(state)
   }
 
   return (
